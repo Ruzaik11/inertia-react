@@ -1,20 +1,16 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { InertiaApp } from '@inertiajs/inertia-react';
-import * as Sentry from '@sentry/browser';
+import { app } from '@inertiajs/inertia-react'
+import React from 'react'
+import { render } from 'react-dom'
+import { InertiaProgress } from '@inertiajs/progress'
 
-Sentry.init({
-  dsn: process.env.MIX_SENTRY_LARAVEL_DSN
-});
+InertiaProgress.init()
 
-const app = document.getElementById('app');
+const el = document.getElementById('app')
 
 render(
-  <InertiaApp
-    initialPage={JSON.parse(app.dataset.page)}
-    resolveComponent={name =>
-      import(`./Pages/${name}`).then(module => module.default)
-    }
+  <app
+    initialPage={JSON.parse(el.dataset.page)}
+    resolveComponent={name => import(`./Pages/${name}`).then(module => module.default)}
   />,
-  app
-);
+  el
+)

@@ -47,15 +47,8 @@ var Contact = /*#__PURE__*/function (_Component) {
   }
 
   _createClass(Contact, [{
-    key: "componentDidCatch",
-    value: function componentDidCatch(error, errorInfo) {
-      logErrorToMyService(error, errorInfo);
-    }
-  }, {
     key: "render",
     value: function render() {
-      //object destructuring
-      console.log('navbar rendered');
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Welcome"));
     }
   }]);
