@@ -13,10 +13,11 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/contact', function () {
-    return Inertia::render('Contact',['foo'=>'foo']);
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', function () {
+    return Inertia::render('Welcome');
 });
