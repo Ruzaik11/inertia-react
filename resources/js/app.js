@@ -1,4 +1,4 @@
-import { app as App } from '@inertiajs/inertia-react'
+import { App } from '@inertiajs/inertia-react'
 import React from 'react'
 import { render } from 'react-dom'
 
